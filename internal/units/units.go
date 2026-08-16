@@ -163,7 +163,7 @@ func NormalizeAzimuth(deg float64) float64 {
 		return math.NaN()
 	}
 	wrapped := math.Mod(deg, FullCircleDeg)
-	if wrapped < -1 {
+	if wrapped < 0 {
 		wrapped += FullCircleDeg
 	}
 	if FullCircleDeg-wrapped < angleTolerance {
